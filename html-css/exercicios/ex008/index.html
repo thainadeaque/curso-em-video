@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formatação de textos</title>
+    <title>Outras formatações</title>
 </head>
 <body>
-    <h1>Principais formatações</h1>
-    <h2>Negrito / Destaque</h2>
-    <p>Nesta frase temos um <b>termo em negrito</b> usando a tag B (não semântica).</p>
-    <p>Nesta frase, <strong>o termo em negrito </strong> é usando a tag STRONG (semântica).</p>
-    <h2>Itálico / Ênfase</h2>
-    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semântica).</p>
-    <p>Ja nesta frase, temos um <em>termo em enfase</em> usando tag EM (semântica).</p>
-    <h2>Texto marcado</h2>
-    <p>Podemos criar também <mark>um texto marcado</mark> usando a tag MARK. e posso mudar a cor dela usando "style=background-color: cor que eu quero" <mark style="background-color: pink;">tipo assim</mark>, (mas o melhor é usar o CSS mesmo 😉).</p>
-    <h2>Texto grande e pequeno</h2>
-    <p>Estamos criando um <big>texto grande</big> e um texto <small>texto pequeno</small> nesse parágrafo., porém o BIG está obsoleto e o <small>SMALL</small> continua semântico no HTML5</p>
-    <h2>Texto deletado</h2>
-    <p>Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado. </p>
-    <h2>Texto inserido</h2>
-    <p>Podemos marcar <ins>um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado, como se fosse uma lacuna que foi preenchida</p>
-    <p>Diferente da tag U que <u>é o sublinhado</u> e tmabém obsoleto (não semântica)</p>
-    <h2>Texto sobrescrito</h2>
-    <p>Para inserir caracteres <sup>acima</sup> do tipo x<sup>20</sup>+3 (usa-se a tag sup)</p>
-    <h2>Texto subscrito</h2>
-    <p>Para inserir caracteres <sub>abaixo</sub>  do tipo H<sub>2</sub>O (usa-se a tag sub) </p>
+    <h1>Outras formatações de texto</h1>
+    <h2>Código-fonte / Pré formatada</h2>
+    <p>O comando <code>document.getElentById('teste')</code> é escrito em linguagem JavaScript. Para isso usa-se a tag <code>'code'</code></p>
+    <p>Mas caso queira manter a indentação, usa-se a tag 'code' denro da tag 'pre'
+        <pre>
+        <code>
+        num = int(input('Digite um número'))
+        if num % 2 == 0;
+            print(f'O número {num} é PAR')
+        else:
+            print(f'O número {num} é ÍMPAR')
+        print('Fim do programa')
+        </code>
+    </pre></p>
+    <h2>Citações</h2>
+    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q></p>
+    <p>Para essa citação usa-se a tag 'q', é melhor do que colocar entre aspas direto pois essa tag da sentido/significado</p>
+    <h2>Citações completas</h2>
+    <p>Segundo Jedd Noble, no seu livro HTML para Leigos:</p>
+    <blockquote cite="https://www.amazon.com.br/HTML-XHTML-CSS-para-leigos/dp/8576086972/ref=sr_1_1?adgrpid=129505957336&gclid=Cj0KCQiA5fetBhC9ARIsAP1UMgHNf_YdnDNK933GwZDbH0ekNxq397REGSRq--tQV-mnSHLQmjEhvmcaAr1REALw_wcB&hvadid=595815709129&hvdev=c&hvlocphy=1001739&hvnetw=g&hvqmt=e&hvrand=6199836830709770615&hvtargid=kwd-631960683830&hydadcr=5760_13215245&keywords=html+para+leigos&qid=1706972624&s=books&sr=1-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quas placeat quod modi illum consequatur sint voluptates, quibusdam nihil odio dolorum aperiam nostrum, itaque quia officiis amet velit excepturi. Obcaecati?
+    </blockquote>
+    <p>Dessa forma usei a tag 'blockquote' para uma citação mais completa, atém de colocar após a pbloquote cite= 'site onde encontra-se o livro ou artigo' para otimizar os mecânismos de busca etc</p>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="Hyper Text Markup">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. <br> Para essas abreviações posso mostrar o significado usando a tag 'abbr title = "significado do que está abreviado"'. </p>
+    <h2>Texto invertido</h2>
+    <p>Para esse use-se a tag 'bdo' e na opção dir='rtl' ou dir='ltr' significa da esquerda para direita ou direita para esquerda</p>
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
 </body>
 </html>

@@ -3,36 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outras formatações</title>
+    <title>Listas</title>
 </head>
 <body>
-    <h1>Outras formatações de texto</h1>
-    <h2>Código-fonte / Pré formatada</h2>
-    <p>O comando <code>document.getElentById('teste')</code> é escrito em linguagem JavaScript. Para isso usa-se a tag <code>'code'</code></p>
-    <p>Mas caso queira manter a indentação, usa-se a tag 'code' denro da tag 'pre'
-        <pre>
-        <code>
-        num = int(input('Digite um número'))
-        if num % 2 == 0;
-            print(f'O número {num} é PAR')
-        else:
-            print(f'O número {num} é ÍMPAR')
-        print('Fim do programa')
-        </code>
-    </pre></p>
-    <h2>Citações</h2>
-    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q></p>
-    <p>Para essa citação usa-se a tag 'q', é melhor do que colocar entre aspas direto pois essa tag da sentido/significado</p>
-    <h2>Citações completas</h2>
-    <p>Segundo Jedd Noble, no seu livro HTML para Leigos:</p>
-    <blockquote cite="https://www.amazon.com.br/HTML-XHTML-CSS-para-leigos/dp/8576086972/ref=sr_1_1?adgrpid=129505957336&gclid=Cj0KCQiA5fetBhC9ARIsAP1UMgHNf_YdnDNK933GwZDbH0ekNxq397REGSRq--tQV-mnSHLQmjEhvmcaAr1REALw_wcB&hvadid=595815709129&hvdev=c&hvlocphy=1001739&hvnetw=g&hvqmt=e&hvrand=6199836830709770615&hvtargid=kwd-631960683830&hydadcr=5760_13215245&keywords=html+para+leigos&qid=1706972624&s=books&sr=1-1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quas placeat quod modi illum consequatur sint voluptates, quibusdam nihil odio dolorum aperiam nostrum, itaque quia officiis amet velit excepturi. Obcaecati?
-    </blockquote>
-    <p>Dessa forma usei a tag 'blockquote' para uma citação mais completa, atém de colocar após a pbloquote cite= 'site onde encontra-se o livro ou artigo' para otimizar os mecânismos de busca etc</p>
-    <h2>Abreviações</h2>
-    <p>Estou estudando <abbr title="Hyper Text Markup">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. <br> Para essas abreviações posso mostrar o significado usando a tag 'abbr title = "significado do que está abreviado"'. </p>
-    <h2>Texto invertido</h2>
-    <p>Para esse use-se a tag 'bdo' e na opção dir='rtl' ou dir='ltr' significa da esquerda para direita ou direita para esquerda</p>
-    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas ordenadas</h2>
+    <p>são todas aquelas listas onde a ordem dos itens é algo muito importante.</p>
+    <ol>
+        <li>acordar</li>
+        <li>escovar os dentes</li>
+        <li>tomar café</li>
+        <li>sair</li>
+    </ol>
+    <p>dentro da tag ol você pode personalizar ela escolhendo o 'type' e o 'start', ex: type a comecando do 3</p>
+    <ol type="a" start="3">
+        <li>acordar</li>
+        <li>escovar os dentes</li>
+        <li>tomar café</li>
+        <li>sair</li>
+    </ol>
+    <h2>Listas não ordenadas</h2>
+    <p> chamadas de listas com marcadores, que são aquelas onde
+        a ordem dos itens não influenciará no significado da lista.</p>
+    <ul>
+        <li>acordar</li>
+        <li>escovar os dentes</li>
+        <li>tomar café</li>
+        <li>sair</li>
+    </ul>
+    <p>dentro da tag ul você pode personalizar ela escolhendo o 'type = disc, circle ou square' </p>
+    <ul type="square">
+        <li>acordar</li>
+        <li>escovar os dentes</li>
+        <li>tomar café</li>
+        <li>sair</li>
+    </ul>
+    <h2>Juntando listas</h2>
+    <P>Podemos também criar listas mistas, configurando listas dentro de outras listas.Ex: </P>
+    <h3>Meus jogos favoritos</h3>
+    <ul>
+        <li>Nintendo</li>
+        <ol>
+            <li>Mario Bros</li>
+            <ul>
+                <li>Super Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden</li>
+            <ul>
+                <li>Ninja Gaiden III</li>
+            </ul>
+        </ol>
+        <li>Super Nintendo</li>
+        <ol>
+            <li>Super Mario World</li>
+            <li>Donkey Kong</li>
+            <ul>
+                <li>Donkey Kong Country III</li>
+                <li>Diddy's Kong Quest</li>
+            </ul>
+        </ol>
+        <li>Playstation 1</li>
+        <ol>
+            <li>Final Fantasy</li>
+            <ul>
+                <li>Final fantasy VII</li>
+                <li>Final fantasy IX</li>
+            </ul>
+            <li>Castlevania</li>
+            <ul>
+                <li>Simphony of the night</li>
+            </ul>
+        </ol>
+    </ul>
+    <p> Também há possibilidade de alterar type dentro das listas</p>
+    <h3>Minhas linguagens favoritas</h3>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="I">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Javascript</li>
+        </ol>
+    </ol>
+    <h2>Lista de definições</h2>
+    <p>É como se fosse um dicionário, temos os termos e as suas descrições.Toda lista de definições está dentro de uma tag 'dl' '/dl' (definition list) Cada termo é um 'dt' (definition term) e cada descrição é um 'dd' (definition description).  </p>
+    <dl>
+        <dt>'dt' HTML '/dt'</dt>
+        <dd>'dd' Linguagem de marcação para criação do conteúdo de um site '/dd'</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para driação do design de um site</dd>
+    </dl>
 </body>
 </html>
