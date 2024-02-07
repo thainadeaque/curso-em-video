@@ -6,13 +6,41 @@
     <title>Midias</title>
 </head>
 <body>
-    <h1>Imagens dinâmicas</h1>
+    <h1>Imagens e sons</h1>
+    <h2>Imagens dinâmicas</h2>
     <p>Tente abrir esse site em vários dispositivos ou simplismente aumente e diminua o tamanho do seu navegador</p>
-    <p>usa-se a tap 'picture' e dentro dela souce:media:type</p>
+    <p>usa-se a tag 'picture' e dentro dela souce:media:type</p>
     <picture>
         <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
         <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
         <img src="imagens/foto-g.png" alt="imagem com fundo colorido e letra centralizada">
     </picture>
+    <h2>Reproduzindo áudio</h2>
+    <p>Vamos aprender a reproduzir áudio em HTML5</p>
+    <audio src="audio/happy-audio.mp3" controls preload="metadata"></audio>
+    <p>
+        <ul> <li>
+            atributo preload indica se o áudio será pré-carregado ou não e aceita três valores:
+            <ul>
+                <li>metadata vai carregar apenas as informações sobre o arquivo (tamanho, tempo, informações de direitos, etc)</li>
+                <li>none não vai carregar absolutamente nada até que o usuário clique no botão play ou um script inicie a reprodução</li>
+                <li>auto (padrão) vai carregar o arquivo de áudio inteiro assim que a página for carregada, mesmo que o usuário nunca aperte o play</li>
+            </ul>
+        </li>
+            <li>
+                auto (padrão) vai carregar o arquivo de áudio inteiro assim que a página for
+                carregada, mesmo que o usuário nunca aperte o play
+            </li> 
+        <li>
+           atributo controls vai apresentar o player na tela. Caso não seja colocado na tag 'audio' o controle será transparente e o usuário não poderá interagir com ele.
+        </li>
+        <li>
+            atributo autoplay, quando inserido, vai iniciar a reprodução do áudio assim que
+            a página for carregada.
+        </li>
+         <li>
+             atributo loop vai fazer com que o áudio seja repetido eternamente assim que terminar a sua reprodução.
+         </li>
+        </ul>
 </body>
 </html>
